@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
 function TableDemo() {
-  return <div>Table</div>;
+  return <div>Table</div>
 }
 
-export default TableDemo;
+export default TableDemo

@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
 function Introduction() {
-  return <div>Introduction</div>;
+  return <div>Introduction</div>
 }
 
-export default Introduction;
+export default Introduction
