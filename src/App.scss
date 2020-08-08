@@ -1,0 +1,62 @@
+@import "~bulma/bulma.sass";
+
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+html,
+body {
+  position: static;
+  overflow: hidden;
+}
+
+.soupe-ui-app {
+  height: 100vh;
+}
+
+.soupe-ui-layout-container {
+  height: 100vh;
+}
+
+.soupe-ui-layout-header {
+  background-color: $dark !important;
+}
+
+.soupe-ui-layout-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-shrink: 1;
+}
+
+.soupe-ui-layout-body > .hero-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-shrink: 1;
+}
+
+.soupe-ui-layout-sidebar > .hero > .hero-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-shrink: 1;
+}
+
+.soupe-ui-layout-sidebar .panel {
+  background-color: transparent;
+}
+
+.panel > .hero-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-shrink: 1;
+}
+
+.soupe-ui-layout-footer {
+  background-color: $dark;
+  color: $light;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  max-height: 60px !important;
+}
