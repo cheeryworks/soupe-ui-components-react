@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 function TreeSelectDemo() {
-  return <div>TreeSelect</div>;
+  return <div>TreeSelect</div>
 }
 
-export default TreeSelectDemo;
+export default TreeSelectDemo
