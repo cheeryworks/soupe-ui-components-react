@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  NavLink
-} from 'react-router-dom'
+import { HashRouter, Switch, Route, NavLink } from 'react-router-dom'
 import logo from './assets/logo.png'
 import './App.scss'
 import Home from './pages/Home'
@@ -12,7 +7,7 @@ import Components from './pages/Components'
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className='hero soupe-ui-layout-container'>
         <nav className='hero-head navbar soupe-ui-layout-header is-dark'>
           <div className='navbar-brand'>
@@ -56,7 +51,7 @@ function App() {
           ©2020 CheeryWorks, Ltd.
         </div>
       </div>
-    </Router>
+    </HashRouter>
   )
 }
 

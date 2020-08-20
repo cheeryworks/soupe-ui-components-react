@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
   NavLink,
@@ -16,7 +16,7 @@ function Components() {
   let match = useRouteMatch()
 
   return (
-    <Router>
+    <HashRouter>
       <div className='tile hero-body px-0 py-0 soupe-ui-layout-sidebar'>
         <div className='tile is-vertical is-3 px-2 py-2 hero'>
           <div className='panel is-primary hero-body px-0 py-0 hero'>
@@ -100,7 +100,7 @@ function Components() {
           </div>
         </div>
       </div>
-    </Router>
+    </HashRouter>
   )
 }
 
