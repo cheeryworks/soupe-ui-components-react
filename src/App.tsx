@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter, Switch, Route, NavLink } from 'react-router-dom'
+import { HashRouter, NavLink, Route, Switch } from 'react-router-dom'
 import logo from './assets/logo.png'
 import './App.scss'
 import Home from './pages/Home'
@@ -16,7 +16,7 @@ function App() {
         >
           <div className='navbar-brand'>
             <NavLink className='navbar-item' to='/'>
-              <img src={logo} className='logo' alt=''></img>
+              <img src={ logo } className='logo' alt=''></img>
               Soupe UI Components (React)
             </NavLink>
           </div>
@@ -44,10 +44,10 @@ function App() {
         <div className='hero-body px-0 py-0 soupe-ui-layout-body hero'>
           <Switch>
             <Route path='/components'>
-              <Components />
+              <Components/>
             </Route>
             <Route path='/'>
-              <Home />
+              <Home/>
             </Route>
           </Switch>
         </div>

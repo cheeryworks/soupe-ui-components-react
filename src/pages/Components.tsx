@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  HashRouter,
-  Switch,
-  Route,
-  NavLink,
-  useRouteMatch
-} from 'react-router-dom'
+import { HashRouter, NavLink, Route, Switch, useRouteMatch } from 'react-router-dom'
 import Introduction from './components/Introduction'
 import SelectDemo from './components/SelectDemo'
 import TreeDemo from './components/TreeDemo'
@@ -26,7 +20,7 @@ function Components() {
               <p className='panel-block'></p>
               <NavLink
                 className='panel-block'
-                to={`${match.url}`}
+                to={ `${ match.url }` }
                 exact
                 activeClassName='is-active'
               >
@@ -36,8 +30,8 @@ function Components() {
                 Introduction
               </NavLink>
               <NavLink
-                className={`panel-block`}
-                to={`${match.url}/select`}
+                className={ `panel-block` }
+                to={ `${ match.url }/select` }
                 activeClassName='is-active'
               >
                 <span className='panel-icon'>
@@ -46,8 +40,8 @@ function Components() {
                 Select
               </NavLink>
               <NavLink
-                className={`panel-block`}
-                to={`${match.url}/tree`}
+                className={ `panel-block` }
+                to={ `${ match.url }/tree` }
                 activeClassName='is-active'
               >
                 <span className='panel-icon'>
@@ -56,8 +50,8 @@ function Components() {
                 Tree
               </NavLink>
               <NavLink
-                className={`panel-block`}
-                to={`${match.url}/tree-select`}
+                className={ `panel-block` }
+                to={ `${ match.url }/tree-select` }
                 activeClassName='is-active'
               >
                 <span className='panel-icon'>
@@ -66,8 +60,8 @@ function Components() {
                 TreeSelect
               </NavLink>
               <NavLink
-                className={`panel-block`}
-                to={`${match.url}/table`}
+                className={ `panel-block` }
+                to={ `${ match.url }/table` }
                 activeClassName='is-active'
               >
                 <span className='panel-icon'>
@@ -82,20 +76,20 @@ function Components() {
         <div className='tile is-9 px-2 py-2 soupe-ui-layout-main-content hero'>
           <div className='panel hero-body px-2 py-2'>
             <Switch>
-              <Route path={`${match.path}/select`}>
-                <SelectDemo />
+              <Route path={ `${ match.path }/select` }>
+                <SelectDemo/>
               </Route>
-              <Route path={`${match.path}/tree`}>
-                <TreeDemo />
+              <Route path={ `${ match.path }/tree` }>
+                <TreeDemo/>
               </Route>
-              <Route path={`${match.path}/tree-select`}>
-                <TreeSelectDemo />
+              <Route path={ `${ match.path }/tree-select` }>
+                <TreeSelectDemo/>
               </Route>
-              <Route path={`${match.path}/table`}>
-                <TableDemo />
+              <Route path={ `${ match.path }/table` }>
+                <TableDemo/>
               </Route>
-              <Route path={match.path}>
-                <Introduction />
+              <Route path={ match.path }>
+                <Introduction/>
               </Route>
             </Switch>
           </div>
