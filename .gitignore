@@ -45,6 +45,7 @@ Thumbs.db
 
 # NodeJS project file
 node_modules/
+build/
 npm-debug.log*
 
 # Bit directories
