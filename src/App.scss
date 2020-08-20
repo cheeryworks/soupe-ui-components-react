@@ -55,6 +55,15 @@ body {
   color: $light;
 }
 
+.navbar.is-dark .navbar-end > a.navbar-item:hover {
+  background-color: inherit;
+  font-weight: 600;
+}
+
+.navbar-burger {
+  height: auto;
+}
+
 .logo {
   width: 60px;
   height: 60px;

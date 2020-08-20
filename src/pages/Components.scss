@@ -1,0 +1,26 @@
+@import '~bulma/sass/utilities/_all';
+
+.soupe-ui-layout-sidebar.hero > .hero-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-shrink: 1;
+}
+
+.soupe-ui-layout-sidebar .panel {
+  background-color: transparent;
+}
+
+.panel > .hero-body,
+.panel.hero-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-shrink: 1;
+}
+
+.tile {
+  min-height: auto;
+}
+
+.panel-block {
+  color: $dark !important;
+}

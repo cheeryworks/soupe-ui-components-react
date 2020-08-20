@@ -9,14 +9,18 @@ function App() {
   return (
     <HashRouter>
       <div className='hero soupe-ui-layout-container'>
-        <nav className='hero-head navbar soupe-ui-layout-header is-dark'>
+        <nav
+          className='hero-head navbar soupe-ui-layout-header is-dark'
+          role='navigation'
+          aria-label='main navigation'
+        >
           <div className='navbar-brand'>
             <NavLink className='navbar-item' to='/'>
               <img src={logo} className='logo' alt=''></img>
               Soupe UI Components (React)
             </NavLink>
           </div>
-          <div className='navbar-menu'>
+          <div className='navbar-menu' id='navbar-menu'>
             <div className='navbar-start'>
               <NavLink
                 className='navbar-item'

@@ -11,6 +11,7 @@ import SelectDemo from './components/SelectDemo'
 import TreeDemo from './components/TreeDemo'
 import TreeSelectDemo from './components/TreeSelectDemo'
 import TableDemo from './components/TableDemo'
+import './Components.scss'
 
 function Components() {
   let match = useRouteMatch()
