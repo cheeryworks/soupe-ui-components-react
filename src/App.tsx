@@ -52,7 +52,7 @@ function App() {
           </Switch>
         </div>
         <div className='hero-foot px-1 py-1 soupe-ui-layout-footer'>
-          ©2020 CheeryWorks, Ltd.
+          ©2020 Beijing CheeryWorks Technology Co., Ltd.
         </div>
       </div>
     </HashRouter>

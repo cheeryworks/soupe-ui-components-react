@@ -13,7 +13,7 @@ function Components() {
   return (
     <HashRouter>
       <div className='tile hero-body px-0 py-0 soupe-ui-layout-sidebar'>
-        <div className='tile is-vertical is-3 px-2 py-2 hero'>
+        <div className='tile is-vertical is-3 pl-2 pr-1 py-2 hero'>
           <div className='panel is-primary hero-body px-0 py-0 hero'>
             <p className='panel-heading hero-head'>Components</p>
             <div className='hero-body px-0 py-0'>
@@ -73,7 +73,7 @@ function Components() {
             </div>
           </div>
         </div>
-        <div className='tile is-9 px-2 py-2 soupe-ui-layout-main-content hero'>
+        <div className='tile is-9 pl-1 pr-2 py-2 soupe-ui-layout-main-content hero'>
           <div className='panel hero-body px-2 py-2'>
             <Switch>
               <Route path={ `${ match.path }/select` }>
