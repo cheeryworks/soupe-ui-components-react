@@ -47,6 +47,7 @@ Thumbs.db
 node_modules/
 build/
 npm-debug.log*
+.eslintcache
 
 # Bit directories
 .bit
