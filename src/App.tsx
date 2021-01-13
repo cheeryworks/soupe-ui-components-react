@@ -10,7 +10,7 @@ function App() {
     <HashRouter>
       <div className='hero soupe-ui-layout-container'>
         <nav
-          className='hero-head navbar soupe-ui-layout-header is-success'
+          className='hero-head navbar soupe-ui-layout-header is-dark'
           role='navigation'
           aria-label='main navigation'
         >
