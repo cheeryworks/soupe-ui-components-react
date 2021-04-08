@@ -5,6 +5,7 @@ import SelectDemo from './components/SelectDemo'
 import TreeDemo from './components/TreeDemo'
 import TreeSelectDemo from './components/TreeSelectDemo'
 import TableDemo from './components/TableDemo'
+import TagDemo from './components/TagDemo'
 import './Components.scss'
 
 function Components() {
@@ -57,7 +58,7 @@ function Components() {
                 <span className='panel-icon'>
                   <i className='fas fa-angle-right' aria-hidden='true'></i>
                 </span>
-                TreeSelect
+                Tree Select
               </NavLink>
               <NavLink
                 className={ `panel-block` }
@@ -68,6 +69,16 @@ function Components() {
                   <i className='fas fa-angle-right' aria-hidden='true'></i>
                 </span>
                 Table
+              </NavLink>
+              <NavLink
+                className={ `panel-block` }
+                to={ `${ match.url }/tag` }
+                activeClassName='is-active'
+              >
+                <span className='panel-icon'>
+                  <i className='fas fa-angle-right' aria-hidden='true'></i>
+                </span>
+                Tag
               </NavLink>
               <p className='panel-block'></p>
             </div>
@@ -87,6 +98,9 @@ function Components() {
               </Route>
               <Route path={ `${ match.path }/table` }>
                 <TableDemo/>
+              </Route>
+              <Route path={ `${ match.path }/tag` }>
+                <TagDemo/>
               </Route>
               <Route path={ match.path }>
                 <Introduction/>

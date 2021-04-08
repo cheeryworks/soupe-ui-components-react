@@ -1,9 +1,9 @@
 import React from 'react'
 import { HashRouter, NavLink, Route, Switch } from 'react-router-dom'
-import logo from './assets/logo.png'
-import './App.scss'
-import Home from './pages/Home'
-import Components from './pages/Components'
+import logo from '../assets/logo.png'
+import './App.sass'
+import Home from './Home'
+import Components from './Components'
 
 function App() {
   return (

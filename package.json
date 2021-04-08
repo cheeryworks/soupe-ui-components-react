@@ -13,8 +13,7 @@
     "test": "react-scripts test"
   },
   "dependencies": {
-    "@cheeryworks/bulma": "^0.9.3-rc.0",
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@cheeryworks/soupe-ui-components-styles": "^1.0.0-alpha.5"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.10",
