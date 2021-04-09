@@ -1,38 +1,51 @@
 import React from 'react'
+import Select from '../../components/select/Select'
+
+const options = [
+  {
+    id: 'A1',
+    name: 'A1'
+  },
+  {
+    id: 'A2',
+    name: 'A2'
+  }
+]
+
+const table = {
+  totalPage: 2,
+  page: 1,
+  pageSizes: [ 20, 50, 100 ]
+}
 
 function SelectDemo() {
   return (
-    <div className='dropdown is-hoverable'>
-      <div className='dropdown-trigger'>
-        <button
-          className='button'
-          aria-haspopup='true'
-          aria-controls='dropdown-menu'
-        >
-          <span>Dropdown button</span>
-          <span className='icon is-small'>
-            <i className='fas fa-angle-down' aria-hidden='true'></i>
-          </span>
-        </button>
+    <div>
+      <div className="field">
+        <label className="label">Default Select</label>
+        <Select options={ options }></Select>
       </div>
-      <div className='dropdown-menu' id='dropdown-menu' role='menu'>
-        <div className='dropdown-content'>
-          <button className='dropdown-item button is-white'>
-            Dropdown item
-          </button>
-          <button className='dropdown-item button is-white'>
-            Other dropdown item
-          </button>
-          <button className='dropdown-item button is-white is-active'>
-            Active dropdown item
-          </button>
-          <button className='dropdown-item button is-white'>
-            Other dropdown item
-          </button>
-          <button className='dropdown-item button is-white'>
-            With a divider
-          </button>
-        </div>
+      <div className="field">
+        <label className="label">Select with customized labels</label>
+        <Select
+          leftLabel="
+          $t('soupe.ui.components.table.pagination_pages', {
+            currentPage: table.page,
+            totalPage: table.totalPage > 0 ? table.totalPage : 1
+          }) + $t('soupe.ui.components.table.pagination_page_sizes_left_bottom_label')"
+          options={ table.pageSizes }
+          rightLabel="
+          $t('soupe.ui.components.table.pagination_page_sizes_right_label')
+        "
+        ></Select>
+      </div>
+      <div className="field">
+        <label className="label">Readonly Select</label>
+        <Select options={ options } readonly></Select>
+      </div>
+      <div className="field">
+        <label className="label">100% width Select</label>
+        <Select options={ options } width="100%"></Select>
       </div>
     </div>
   )
