@@ -13,7 +13,7 @@
     "test": "react-scripts test"
   },
   "dependencies": {
-    "@cheeryworks/soupe-ui-components-styles": "^1.0.0-alpha.5"
+    "@cheeryworks/soupe-ui-components-skeleton": "^1.0.0-alpha.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.10",
