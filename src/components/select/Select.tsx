@@ -105,34 +105,37 @@ const Select: React.FC<SelectProps> = (props) => {
   }, [ props.customizedName ])
 
   useEffect(() => {
-    function initValue() {
-      if (props.options && props.options.length > 0) {
-        let currentOption = null
+      function initValue() {
+        if (props.options && props.options.length > 0) {
+          let currentOption = null
 
-        if (props.autoSelect) {
-          currentOption = props.options[0]
-        }
+          if (props.autoSelect) {
+            currentOption = props.options[0]
+          }
 
-        if (props.value) {
-          for (let option of props.options) {
-            let currentValue =
-              RecordUtil.getRecordValue(option, props.valueProperty) + ''
+          if (props.value) {
+            for (let option of props.options) {
+              let currentValue =
+                RecordUtil.getRecordValue(option, props.valueProperty) + ''
 
-            if (currentValue === props.value + '') {
-              currentOption = option
-              break
+              if (currentValue === props.value + '') {
+                currentOption = option
+                break
+              }
             }
           }
-        }
 
-        if (currentOption) {
-          select(props, currentOption, false)
+          if (currentOption) {
+            select(props, currentOption, false)
+          }
         }
       }
-    }
 
-    initValue()
-  }, [])
+      initValue()
+    },
+    // eslint-disable-next-line
+    []
+  )
 
   return (
     <div
