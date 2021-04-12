@@ -1,5 +1,6 @@
 import React from 'react'
 import Select from '../../components/select/Select'
+import { useTranslation } from 'react-i18next'
 
 const options = [
   {
@@ -19,6 +20,8 @@ const table = {
 }
 
 function SelectDemo() {
+  const { t } = useTranslation()
+
   return (
     <div>
       <div className="field">
@@ -28,16 +31,17 @@ function SelectDemo() {
       <div className="field">
         <label className="label">Select with customized labels</label>
         <Select
-          leftLabel="
-          $t('soupe.ui.components.table.pagination_pages', {
-            currentPage: table.page,
-            totalPage: table.totalPage > 0 ? table.totalPage : 1
-          }) + $t('soupe.ui.components.table.pagination_page_sizes_left_bottom_label')"
+          leftLabel={
+            t('soupe.ui.components.table.pagination_pages', {
+              currentPage: table.page,
+              totalPage: table.totalPage > 0 ? table.totalPage : 1
+            }) +
+            t('soupe.ui.components.table.pagination_page_sizes_left_bottom_label') }
           options={ table.pageSizes }
-          rightLabel="
-          $t('soupe.ui.components.table.pagination_page_sizes_right_label')
-        "
-        ></Select>
+          rightLabel={
+            t('soupe.ui.components.table.pagination_page_sizes_right_label')
+          }>
+        </Select>
       </div>
       <div className="field">
         <label className="label">Readonly Select</label>
