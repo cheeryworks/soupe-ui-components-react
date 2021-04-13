@@ -1,6 +1,6 @@
 import React from 'react'
 import { HashRouter, NavLink, Route, Switch } from 'react-router-dom'
-import logo from '../assets/logo.png'
+import logo from './assets/logo.png'
 import './App.sass'
 import Home from './Home'
 import Components from './Components'
