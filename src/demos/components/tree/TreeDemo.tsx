@@ -1,7 +1,8 @@
 import React from 'react'
+import Tree from '../../../components/tree/Tree'
 
 function TreeDemo() {
-  return <div>Tree</div>
+  return <Tree></Tree>
 }
 
 export default TreeDemo

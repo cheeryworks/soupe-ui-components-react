@@ -1,11 +1,17 @@
 import React from 'react'
 import { HashRouter, NavLink, Route, Switch, useRouteMatch } from 'react-router-dom'
 import Introduction from './components/Introduction'
-import SelectDemo from './components/SelectDemo'
-import TreeDemo from './components/TreeDemo'
-import TreeSelectDemo from './components/TreeSelectDemo'
-import TableDemo from './components/TableDemo'
-import TagDemo from './components/TagDemo'
+import SelectDemo from './components/select/SelectDemo'
+import TreeDemo from './components/tree/TreeDemo'
+import TreeSelectDemo from './components/tree-select/TreeSelectDemo'
+import TableDemo from './components/table/TableDemo'
+import TagDemo from './components/tag/TagDemo'
+import ContextMenuDemo from './components/context-menu/ContextMenuDemo'
+import MessageBoxDemo from './components/message-box/MessageBoxDemo'
+import CardDemo from './components/card/CardDemo'
+import AccordionDemo from './components/accordion/AccordionDemo'
+import WizardDemo from './components/wizard/WizardDemo'
+import DatePickerDemo from './components/date-picker/DatePickerDemo'
 import './Components.scss'
 
 function Components() {
@@ -80,6 +86,66 @@ function Components() {
                 </span>
                 Tag
               </NavLink>
+              <NavLink
+                className={ `panel-block` }
+                to={ `${ match.url }/context-menu` }
+                activeClassName='is-active'
+              >
+                <span className='panel-icon'>
+                  <i className='fas fa-angle-right' aria-hidden='true'></i>
+                </span>
+                Context Menu
+              </NavLink>
+              <NavLink
+                className={ `panel-block` }
+                to={ `${ match.url }/message-box` }
+                activeClassName='is-active'
+              >
+                <span className='panel-icon'>
+                  <i className='fas fa-angle-right' aria-hidden='true'></i>
+                </span>
+                Message Box
+              </NavLink>
+              <NavLink
+                className={ `panel-block` }
+                to={ `${ match.url }/card` }
+                activeClassName='is-active'
+              >
+                <span className='panel-icon'>
+                  <i className='fas fa-angle-right' aria-hidden='true'></i>
+                </span>
+                Card
+              </NavLink>
+              <NavLink
+                className={ `panel-block` }
+                to={ `${ match.url }/accordion` }
+                activeClassName='is-active'
+              >
+                <span className='panel-icon'>
+                  <i className='fas fa-angle-right' aria-hidden='true'></i>
+                </span>
+                Accordion
+              </NavLink>
+              <NavLink
+                className={ `panel-block` }
+                to={ `${ match.url }/wizard` }
+                activeClassName='is-active'
+              >
+                <span className='panel-icon'>
+                  <i className='fas fa-angle-right' aria-hidden='true'></i>
+                </span>
+                Wizard
+              </NavLink>
+              <NavLink
+                className={ `panel-block` }
+                to={ `${ match.url }/date-picker` }
+                activeClassName='is-active'
+              >
+                <span className='panel-icon'>
+                  <i className='fas fa-angle-right' aria-hidden='true'></i>
+                </span>
+                Date Picker
+              </NavLink>
               <p className='panel-block'></p>
             </div>
           </div>
@@ -101,6 +167,24 @@ function Components() {
               </Route>
               <Route path={ `${ match.path }/tag` }>
                 <TagDemo/>
+              </Route>
+              <Route path={ `${ match.path }/context-menu` }>
+                <ContextMenuDemo/>
+              </Route>
+              <Route path={ `${ match.path }/message-box` }>
+                <MessageBoxDemo/>
+              </Route>
+              <Route path={ `${ match.path }/card` }>
+                <CardDemo/>
+              </Route>
+              <Route path={ `${ match.path }/accordion` }>
+                <AccordionDemo/>
+              </Route>
+              <Route path={ `${ match.path }/wizard` }>
+                <WizardDemo/>
+              </Route>
+              <Route path={ `${ match.path }/date-picker` }>
+                <DatePickerDemo/>
               </Route>
               <Route path={ match.path }>
                 <Introduction/>

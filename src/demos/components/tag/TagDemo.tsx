@@ -1,5 +1,5 @@
 import React from 'react'
-import Tag from '../../components/tag/Tag'
+import Tag from '../../../components/tag/Tag'
 
 function TagDemo() {
   return <div>

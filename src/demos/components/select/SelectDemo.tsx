@@ -1,5 +1,5 @@
 import React from 'react'
-import Select from '../../components/select/Select'
+import Select from '../../../components/select/Select'
 import { useTranslation } from 'react-i18next'
 
 const options = [
