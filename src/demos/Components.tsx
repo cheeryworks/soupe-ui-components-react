@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter, NavLink, Route, Switch, useRouteMatch } from 'react-router-dom'
+import { HashRouter, NavLink, Redirect, Route, Switch, useRouteMatch } from 'react-router-dom'
 import Introduction from './components/Introduction'
 import SelectDemo from './components/select/SelectDemo'
 import TreeDemo from './components/tree/TreeDemo'
@@ -27,7 +27,7 @@ function Components() {
               <p className='panel-block'></p>
               <NavLink
                 className='panel-block'
-                to={ `${ match.url }` }
+                to={ `${ match.url }/introduction` }
                 exact
                 activeClassName='is-active'
               >
@@ -151,7 +151,7 @@ function Components() {
           </div>
         </div>
         <div className='tile is-9 pl-1 pr-2 py-2 soupe-ui-layout-main-content hero'>
-          <div className='panel hero-body px-2 py-2'>
+          <div className='panel hero-body px-2 py-2 hero'>
             <Switch>
               <Route path={ `${ match.path }/select` }>
                 <SelectDemo/>
@@ -186,8 +186,11 @@ function Components() {
               <Route path={ `${ match.path }/date-picker` }>
                 <DatePickerDemo/>
               </Route>
-              <Route path={ match.path }>
+              <Route path={ `${ match.path }/introduction` }>
                 <Introduction/>
+              </Route>
+              <Route path={ `${ match.path }` }>
+                <Redirect to={ `${ match.path }/introduction` }/>
               </Route>
             </Switch>
           </div>

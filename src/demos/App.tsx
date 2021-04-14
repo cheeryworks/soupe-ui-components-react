@@ -35,6 +35,13 @@ function App() {
                 to='/components'
                 exact
                 activeClassName='is-active'
+                isActive={ (match, location) => {
+                  if (location.pathname.startsWith('/components')) {
+                    return true
+                  }
+
+                  return false
+                } }
               >
                 Components
               </NavLink>
