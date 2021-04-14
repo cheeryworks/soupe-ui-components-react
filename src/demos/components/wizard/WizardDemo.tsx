@@ -1,8 +1,13 @@
 import React from 'react'
 import Wizard from '../../../components/wizard/Wizard'
+import WizardItem from '../../../components/wizard/WizardItem'
 
 function WizardDemo() {
-  return <Wizard></Wizard>
+  return <Wizard>
+    <WizardItem>A</WizardItem>
+    <WizardItem>B</WizardItem>
+    <WizardItem>C</WizardItem>
+  </Wizard>
 }
 
 export default WizardDemo
