@@ -22,6 +22,7 @@ function TreeDemo() {
   return <Tree
     records={ records }
     itemControls={ (record) => (
+      // eslint-disable-next-line
       <a>
         <i className="icon fas fa-bars" onClick={ () => console.log(record) }></i>
       </a>
