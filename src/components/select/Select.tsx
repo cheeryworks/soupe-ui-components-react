@@ -26,7 +26,7 @@ export interface SelectProps {
 }
 
 const Select: React.FC<SelectProps> = (props) => {
-  const [ name, setName ] = useState<String>('')
+  const [ name, setName ] = useState<string>('')
 
   const dropDownRef = React.createRef<HTMLDivElement>()
 
