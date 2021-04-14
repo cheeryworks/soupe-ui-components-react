@@ -4,7 +4,7 @@ import WizardItem from '../../../components/wizard/WizardItem'
 
 function WizardDemo() {
   return <Wizard>
-    <WizardItem>A</WizardItem>
+    <WizardItem active>A</WizardItem>
     <WizardItem>B</WizardItem>
     <WizardItem>C</WizardItem>
   </Wizard>
