@@ -1,7 +1,6 @@
-function getValue(record: Object, property: string) {
+function getValue(record: any, property: string) {
   if (record) {
     if (Object.prototype.hasOwnProperty.call(record, property)) {
-      // @ts-ignore
       return record[property]
     } else {
       return record
@@ -12,14 +11,14 @@ function getValue(record: Object, property: string) {
 }
 
 const RecordUtil = {
-  getRecordValue(record: Object, valueProperty?: string) {
+  getRecordValue(record: any, valueProperty?: string) {
     if (!valueProperty) {
       valueProperty = 'id'
     }
 
     return getValue(record, valueProperty)
   },
-  getRecordDisplayName(record: Object, displayProperty?: string) {
+  getRecordDisplayName(record: any, displayProperty?: string) {
     if (!displayProperty) {
       displayProperty = 'name'
     }
