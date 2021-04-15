@@ -6,6 +6,7 @@ import { TreeNestedProps } from './TreeNestedProps'
 export interface TreeProps extends TreeNestedProps {
   autoSelect?: boolean
   records: Array<any>
+  onItemSelected?: (record: any) => void
 }
 
 const Tree: React.FC<TreeProps> = (props) => {
@@ -22,7 +23,17 @@ const Tree: React.FC<TreeProps> = (props) => {
 
   function handleItemClick(record: any) {
     setSelectedItemValue(RecordUtil.getRecordValue(record, props.valueProperty))
+
+    if (props.onItemSelected) {
+      props.onItemSelected(record)
+    }
   }
+
+  useEffect(() => {
+    if (props.selectedItemValue) {
+      setSelectedItemValue(props.selectedItemValue)
+    }
+  }, [ props.selectedItemValue ])
 
   useEffect(() => {
       if (!props.selectedItemValue && props.autoSelect && props.records && props.records.length > 0) {

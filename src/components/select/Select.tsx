@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useImperativeHandle, useState } from 'react'
 import PropTypes from 'prop-types'
 import RecordUtil from '../../utils/RecordUtil'
 
@@ -25,7 +25,7 @@ export interface SelectProps {
   onSelect?: Function
 }
 
-const Select: React.FC<SelectProps> = (props) => {
+const Select = React.forwardRef((props: SelectProps, ref) => {
   const [ name, setName ] = useState<string>('')
 
   const dropDownRef = React.createRef<HTMLDivElement>()
@@ -97,6 +97,12 @@ const Select: React.FC<SelectProps> = (props) => {
       )
     }
   }
+
+  useImperativeHandle(ref, () => ({
+    close() {
+      close()
+    }
+  }))
 
   useEffect(() => {
     if (props.customizedName) {
@@ -184,7 +190,7 @@ const Select: React.FC<SelectProps> = (props) => {
       }
     </div>
   )
-}
+})
 
 Select.defaultProps = {
   autoSelect: true,
