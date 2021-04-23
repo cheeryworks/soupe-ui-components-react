@@ -6,6 +6,7 @@ export interface Option {
 }
 
 export interface SelectProps {
+  className?: string
   options?: Array<Option>
   value?: Object
   readonly?: boolean
@@ -22,7 +23,7 @@ export interface SelectProps {
   optionClickable?: Function
   children?: React.ReactNode
   onChange?: Function
-  onSelect?: Function
+  onSelect?: (option: any, isClick: boolean) => void
 }
 
 const Select = React.forwardRef((props: SelectProps, ref) => {
@@ -146,7 +147,7 @@ const Select = React.forwardRef((props: SelectProps, ref) => {
   return (
     <div
       style={ { width: props.width } }
-      className='soupe-ui-select columns is-gapless is-vcentered mx-0 my-0'>
+      className={ `soupe-ui-select columns is-gapless is-vcentered mx-0 my-0 ${ props.className }` }>
       {
         props.leftLabel &&
         <div className='soupe-ui-select-label column is-narrow'><label>{ props.leftLabel }</label></div>
