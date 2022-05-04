@@ -5,6 +5,7 @@ export interface TagProps {
   className?: string
   selected?: boolean
   onClick?: React.MouseEventHandler<HTMLElement>
+  children?: React.ReactNode
 }
 
 const Tag: React.FC<TagProps> = (props) => {

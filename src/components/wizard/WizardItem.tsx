@@ -5,7 +5,8 @@ export interface WizardItemProps {
   onItemClick?: (key?: string | number) => void
   active?: boolean
   width?: number,
-  isLast?: boolean
+  isLast?: boolean,
+  children?: React.ReactNode
 }
 
 const WizardItem: React.FC<WizardItemProps> = (props) => {

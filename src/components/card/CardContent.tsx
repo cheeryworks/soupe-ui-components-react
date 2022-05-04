@@ -1,7 +1,7 @@
 import React from 'react'
 
 export interface CardContentProps {
-
+  children?: React.ReactNode
 }
 
 const CardContent: React.FC<CardContentProps> = (props) => {

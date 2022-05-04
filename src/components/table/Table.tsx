@@ -22,7 +22,8 @@ export interface TableProps {
   total?: number
   totalPage?: number
   footer?: Array<any>
-  emptyMessage?: Array<React.ReactElement>
+  emptyMessage?: Array<React.ReactElement>,
+  children?: React.ReactNode
 }
 
 const Table: React.FC<TableProps> = (props) => {

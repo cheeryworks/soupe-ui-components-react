@@ -1,7 +1,7 @@
 import React from 'react'
 
 export interface CardHeaderProps {
-
+  children?: React.ReactNode
 }
 
 const CardHeader: React.FC<CardHeaderProps> = (props) => {

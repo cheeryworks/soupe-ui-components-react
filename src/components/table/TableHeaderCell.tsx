@@ -1,7 +1,7 @@
 import React from 'react'
 
 export interface TableHeaderCellProps {
-
+  children?: React.ReactNode
 }
 
 const TableHeaderCell: React.FC<TableHeaderCellProps> = (props) => {

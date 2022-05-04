@@ -3,6 +3,7 @@ import React from 'react'
 export interface AccordionItemTitleProps {
   active?: boolean,
   alert?: string | number
+  children?: React.ReactNode
 }
 
 const AccordionItemTitle: React.FC<AccordionItemTitleProps> = (props) => {

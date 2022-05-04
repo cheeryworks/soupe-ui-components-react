@@ -7,6 +7,7 @@ export interface TreeProps extends TreeNestedProps {
   autoSelect?: boolean
   records: Array<any>
   onItemSelected?: (record: any) => void
+  children?: React.ReactNode
 }
 
 const Tree: React.FC<TreeProps> = (props) => {

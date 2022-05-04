@@ -2,7 +2,8 @@ import React from 'react'
 
 export interface AccordionItemContentProps {
   active?: boolean,
-  height?: number
+  height?: number,
+  children?: React.ReactNode
 }
 
 const AccordionItemContent: React.FC<AccordionItemContentProps> = (props) => {
