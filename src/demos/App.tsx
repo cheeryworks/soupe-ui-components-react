@@ -1,5 +1,5 @@
-import React, {ComponentProps} from 'react'
-import {Navigate, NavLink, Route, Routes, useLocation, useMatch, useResolvedPath} from 'react-router-dom'
+import React from 'react'
+import {NavLink, Route, Routes} from 'react-router-dom'
 import logo from './assets/logo.png'
 import externalLinkIcon from './assets/external-link-alt-solid.svg'
 import './App.sass'
@@ -19,9 +19,6 @@ import WizardDemo from "./components/wizard/WizardDemo";
 import DatePickerDemo from "./components/date-picker/DatePickerDemo";
 
 function App() {
-  let location = useLocation();
-  let match = useMatch({ path: location.pathname});
-
   return (
     <div className="hero soupe-ui-layout-container">
       <nav
@@ -51,7 +48,7 @@ function App() {
             </NavLink>
             <a className="navbar-item" href="https://github.com/cheeryworks/soupe-ui-components-react">
               GitHub
-              <img src={externalLinkIcon} className="external-link-icon"/>
+              <img src={externalLinkIcon} className="external-link-icon" alt=""/>
             </a>
           </div>
         </div>
