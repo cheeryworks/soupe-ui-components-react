@@ -5,7 +5,7 @@
   "author": "Carr Chang <carr.z.chang@outlook.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cheeryworks/soupe-ui-components-react"
+    "url": "git+https://github.com/cheeryworks/soupe-ui-components-react.git"
   },
   "scripts": {
     "dev": "react-scripts start",
