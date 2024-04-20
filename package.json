@@ -1,6 +1,6 @@
 {
   "name": "@cheeryworks/soupe-ui-components-react",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Soupe UI Components (React)",
   "author": "Carr Chang <carr.z.chang@outlook.com>",
   "repository": {
@@ -50,9 +50,5 @@
     "not dead",
     "not ie 11",
     "not op_mini all"
-  ],
-  "engines": {
-    "node": ">=12.22.12 <15.0.0",
-    "npm": ">=6.14.16 <7.0.0"
-  }
+  ]
 }
